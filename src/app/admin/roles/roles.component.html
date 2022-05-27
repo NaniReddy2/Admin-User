@@ -1,0 +1,94 @@
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" /> -->
+<body>
+  <div class="container">
+  <div class="row">
+      <div class="col-12 col-sm-12 col-md-12">
+          <div class="card">
+              <div class="card-header">
+                  <h4 style="color:aliceblue;text-align: center;">ROLES TOTAL LIST</h4>
+              </div>
+              <div class="card-body">
+                <div class="col-3 col-sm-3 col-md-3">
+                  <div class="form-group">
+                    <label for="inputSearch" class="form-label" style="color:aliceblue">Search</label>
+                    <input type="text" name="inputSearch" id="inputSearch" class="form-control search-field"  aria-describedby="helpId" [(ngModel)]="searchText">
+                    <small id="helpId"  style="color:aliceblue">Search Id</small>
+                  </div></div>
+                  <div class="table-responsive" id="proTeamScroll" tabindex="2" style="height: 400px; overflow: hidden; outline: none;">
+                      <table class="table table-striped">
+                          <thead>
+                              <tr >
+                                  <th scope="col" [appSort]="rolelist"  data-order="desc" data-name="role_Id">role_Id<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                  </svg></th>
+                                  <th scope="col" [appSort]="rolelist"  data-order="desc" data-name="role_Name">role_Name<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                  </svg></th>
+                                  <th scope="col" [appSort]="rolelist"  data-order="desc" data-name="role_Uniqid">role_Uniqid<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                  </svg></th>
+                                  <th scope="col" [appSort]="rolelist"  data-order="desc" data-name="role_Type">role_Type<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                  </svg></th>
+                                  <th scope="col" [appSort]="rolelist"  data-order="desc" data-name="role_Status">role_Status<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                  </svg></th>
+                                  <th scope="col" [appSort]="rolelist"  data-order="desc" data-name="role_Created_Userid">role_Created_Userid<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                  </svg></th>
+                                  <th scope="col" [appSort]="rolelist"  data-order="desc" data-name="row">row<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                  </svg></th>
+                                  <th>Edit/Delete</th>
+
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let x of rolelist |  searchFilter: searchText  ">
+                                  <td style="color:aliceblue">{{x.role_Id}}
+                                  </td>
+                                  <td style="color:aliceblue">
+                                    {{x.role_Name }}
+                                  </td>
+                                  <td style="color:aliceblue">{{x.role_Uniqid }}</td>
+                                  <td style="color:aliceblue" >
+                                      {{x.role_Type }}
+                                  </td>
+                                  <td style="color:aliceblue">
+                                      {{x.role_Status }}
+                                  </td>
+
+                                <td style="color:aliceblue">
+                                  {{x.role_Created_Userid}}
+                              </td>
+                              <td style="color:aliceblue" >
+                                {{x.row }}
+                              </td>
+                                  <td>
+                                      <button type="button" class="btn btn-primary"  >Edit</button>
+                                      <button type="button"   class="btn btn-danger" style="margin-left:10px">Delete</button>
+                                  </td>
+                              </tr>
+
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+  <!-- <pagination-controls (pageChange)="p = $event" style="color:rgb(255, 255, 255);text-align:center"></pagination-controls> -->
+
+  <!-- <ngx-spinner bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+
+  >
+  <div class="spinner-grow text-light" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <p style="font-size: 20px; color: white">Loading...</p></ngx-spinner> -->
+  </body>

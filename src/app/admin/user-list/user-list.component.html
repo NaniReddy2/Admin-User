@@ -1,0 +1,99 @@
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" /> -->
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12">
+        <div class="card">
+
+            <div class="card-header">
+                <h4 style="color:aliceblue;text-align: center;">USER TOTAL LIST</h4>
+            </div>
+            <div class="card-body">
+              <div class="col-3 col-sm-3 col-md-3">
+              <div class="form-group">
+                <label for="inputSearch" class="form-label" style="color:aliceblue">Search</label>
+                <input type="text" name="inputSearch" id="inputSearch" class="form-control search-field"  aria-describedby="helpId" [(ngModel)]="searchText">
+                <small id="helpId"  style="color:aliceblue">Search Id</small>
+              </div></div>
+                <div class="table-responsive" id="proTeamScroll" tabindex="2" style="height: 400px; overflow: hidden; outline: none;">
+
+                  <table class="table table-striped">
+                        <thead>
+                            <tr >
+                                <th scope="col" [appSort]="userlist"  data-order="desc" data-name="user_Id">Id <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                </svg></th>
+                                <th scope="col" [appSort]="userlist"  data-order="desc" data-name="user_Firstname">FirstName<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                </svg></th>
+                                <th scope="col" [appSort]="userlist"  data-order="desc" data-name="user_Lastname">LastName<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                </svg></th>
+                                <th scope="col" [appSort]="userlist"  data-order="desc" data-name="user_Email">Email<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                </svg></th>
+                                <th scope="col" [appSort]="userlist"  data-order="desc" data-name="user_Address">Address<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                </svg></th>
+                                <th scope="col" [appSort]="userlist"  data-order="desc" data-name="user_Type">Status<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                </svg></th>
+                                <th scope="col" [appSort]="userlist"  data-order="desc" data-name="user_Role">Role<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+</svg></th>
+                                <th>Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let x of userlist |  searchFilter: searchText">
+                                <td style="color:aliceblue">{{x.user_Id}}
+                                </td>
+                                <td style="color:aliceblue">
+                                  {{x.user_Firstname | titlecase}}
+                                </td>
+                                <td style="color:aliceblue">{{x.user_Lastname | titlecase}}</td>
+                                <td style="color:aliceblue" >
+                                    {{x.user_Email | titlecase}}
+                                </td>
+                                <td style="color:aliceblue">
+                                    {{x.user_Address | titlecase}}
+                                </td>
+
+                              <td style="color:aliceblue" >
+                                {{x.user_Status | titlecase}}
+                            </td>
+                            <td style="color:aliceblue">
+                              {{x.user_Role | titlecase}}
+                            </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary"  routerLink="/admin/edit-datails/{{x.user_Id}}">Edit</button>
+                                    <button type="button"   class="btn btn-danger" style="margin-left:10px" (click)="EditProfile(x.user_Id)">Delete</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- <pagination-controls (pageChange)="p = $event" style="color:rgb(0, 0, 0);text-align:center"></pagination-controls> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- <ngx-spinner bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+
+>
+<div class="spinner-grow text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<p style="font-size: 20px; color: white">Loading...</p></ngx-spinner> -->
+</body>
