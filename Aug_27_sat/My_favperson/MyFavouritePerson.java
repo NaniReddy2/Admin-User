@@ -1,0 +1,17 @@
+class MyFavouritePerson 
+{
+	public static void main(String[] args) 
+	{
+		char initial='k';
+		String name="Pavankalyan";
+		double height=5.10;
+        int age=50;
+		boolean heisaleader=true;
+		
+		System.out.println(initial);
+		System.out.println(name);
+		System.out.println(height);
+		System.out.println(age);
+		System.out.println(heisaleader);
+	}
+}

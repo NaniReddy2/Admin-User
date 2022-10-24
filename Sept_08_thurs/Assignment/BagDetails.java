@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class  BagDetails
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		 System.out.println("Enter your Bag-Brand Name");
+		 String brandName=scan.nextLine();
+		 System.out.println("Enter your Bag-Price");
+		 int price=scan.nextInt();
+		 System.out.println("Enter your Bag-colour");
+		 String colour=scan.next();
+		 System.out.println("Enter your Bag-quality");
+		 char quality=scan.next().charAt(0);
+		 System.out.println("Bag has a warenty");
+		 boolean warenty=scan.nextBoolean();
+			
+		System.out.println("BagDetails");
+		System.out.println("Brand Name:"+brandName);
+		System.out.println("Mobile Price:"+price);
+		System.out.println("Bag-colour:"+colour);
+		System.out.println("Bag-quality:"+quality);
+		System.out.println("warenty:"+warenty);
+		
+
+
+			 
+		 
+		 }
+}

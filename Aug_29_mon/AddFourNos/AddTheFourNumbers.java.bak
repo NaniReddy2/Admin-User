@@ -1,0 +1,16 @@
+class  AddTheFourNumbers
+{
+	public static void main(String[] args) 
+	{
+		int m=10;
+		int n=20;
+		int o=30;
+		int p=40;
+		int a=m+n+o+p;	
+		int b=a%4;
+		
+		
+		System.out.println("Add the four numbers "+m+" and "+n+" and "+o+" and "+p+" are = "+a+ " then 4 is divided by  "+a+" then the reminder is "+b);
+
+	}
+}

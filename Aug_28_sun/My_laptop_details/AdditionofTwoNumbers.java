@@ -1,0 +1,10 @@
+class  SubtractionofTwoNumbers
+{
+	public static void main(String[] args) 
+	{   double a=20.5;
+	    double b=1.5;
+		double k=a-b;
+		 
+		System.out.println("sub of"+a+"and"+b+"is:"+k);
+	}
+}
